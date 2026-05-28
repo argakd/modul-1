@@ -247,6 +247,79 @@ console.log(numbers);
 
 // INCLUDES -> mengecek value pada array, ada atau tidak, hasilnya boolean
 const fruits3: string[] = ["banana", "apple", "mango", "orange"];
-console.log(fruits3.includes('apple'));
-console.log(fruits3.includes('grape'));
+console.log(fruits3.includes("apple"));
+console.log(fruits3.includes("grape"));
+
+// MAP -> melakukan looping pada array dan akan mereturn array baru
+const points: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const result = points.map((point, idx) => {
+  console.log(idx);
+
+  return point * 2;
+});
+console.log(result);
+
+const students2 = [
+  { id: 1, name: "arga" },
+  { id: 2, name: "satria" },
+  { id: 3, name: "rafi" },
+];
+
+const result2 = students2.map((student) => {
+  return student.id;
+});
+
+console.log(result2);
+
+// FOREACH -> melakukan looping pada array tapi tidak me return array baru
+const fruits4: string[] = ["apple", "mango", "banana", "orange"];
+
+fruits4.forEach((fruit, index) => {
+  console.log(fruit);
+  console.log(index);
+});
+
+// FILTER -> melakukan looping pada array dan menghasilkan array baru berdasarkan kondisi pada return functionnya
+const ages: number[] = [12, 46, 65, 32, 17, 21, 56];
+
+const result3 = ages.filter((age) => {
+  return age > 21;
+});
+
+console.log(result3);
+
+// FIND -> mencari value yg ditemukan pertama kali dalam array
+const ages2: number[] = [12, 46, 65, 32, 17, 21, 56];
+
+const result4 = ages2.find((age) => {
+  return age === 12;
+});
+
+console.log(result4);
+
+// FIND INDEX -> sama kaya find tapi yg dihasilkan adalah indexnya. Jika tidak ketemu maka akan menghasilkan -1
+const students3 = [
+  { id: 100, name: "arga" },
+  { id: 101, name: "satria" },
+  { id: 103, name: "rafi" },
+  { id: 104, name: "abyan" },
+];
+
+const result5 = students3.findIndex((student) => {
+  return student.id === 104;
+});
+
+console.log(result5);
+
+// REDUCE ->
+
+const numbers2: number[] = [200, 50, 100, 50];
+
+const result6 = numbers2.reduce ((a,b) => {
+  return a + b;
+});
+
+console.log(result6);
+
 
